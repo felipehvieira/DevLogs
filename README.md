@@ -9,7 +9,13 @@ No final a aplicação informará o valor do pagamento individual para cada memb
 
 
 REQUISITOS
-- O grupo será definido pela empresa cadastrada, a qual informará os valores do rodízio;
-- A empresa deve criar grupos, indicando a quantidade de desconto de acordo com o número de pessoas. Exemplo: acima de 10 pessoa terá 10% e acima de 25 pessoas terá 20%;
-
-
+- Cadastro empresa (Com local, fotos, telefones, endereço e texto descritivo)
+- Empresa cadastra as opções de Grupos de Desconto. (Inclui valor de descontos);
+- Cadastrar usário.
+- Cadastrar empresas.
+- Usuário cria e mantém Grupos de Desconto, apartir de uma opção de Grupo pré-cadastrada.
+- Usuário poderá ingressar em um ou mais Grupos de Desconto.
+- Usuário compartilha Grupos de Desconto.
+- A aplicação informará o valor atualizado com desconto, dependendo da quantidades de pessoas no grupo.
+- O aplicativo indicará as pessoas que já realizaram pagamento.
+- O pagamento poderá ser feito via aplicação ou em dinheiro via comanda.
