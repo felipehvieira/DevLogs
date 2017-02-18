@@ -5,7 +5,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Evento {
@@ -14,11 +15,11 @@ public class Evento {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String titulo_evento;
-	@ManyToMany
-	@JoinColumn(name = "usuario")
+	@ManyToOne
+	@JoinColumn(name = "usuario_fk")
 	private Usuario usuario;
-	@ManyToMany
-	@JoinColumn(name = "empresa")
+	@ManyToOne
+	@JoinColumn(name = "empresa_fk")
 	private Empresa empresa;
 
 	public Evento() {

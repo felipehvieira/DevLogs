@@ -17,15 +17,12 @@ public class Empresa {
 	private String Endereco;
 	private String telefone;
 	private String email;
-	@ManyToMany
-	@JoinColumn(name = "evento")
-	private Evento evento;
 
 	public Empresa() {
 
 	}
 
-	public Empresa(int id, String nome, String cnpj, String endereco, String telefone, String email, Evento evento) {
+	public Empresa(int id, String nome, String cnpj, String endereco, String telefone, String email) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -33,7 +30,6 @@ public class Empresa {
 		Endereco = endereco;
 		this.telefone = telefone;
 		this.email = email;
-		this.evento = evento;
 	}
 
 	public int getId() {
@@ -82,14 +78,6 @@ public class Empresa {
 
 	public void setEmail(String email) {
 		this.email = email;
-	}
-
-	public Evento getEvento() {
-		return evento;
-	}
-
-	public void setEvento(Evento evento) {
-		this.evento = evento;
 	}
 
 }
