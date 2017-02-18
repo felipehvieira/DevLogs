@@ -4,8 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="usuario")
 public class Usuario {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -14,18 +16,20 @@ public class Usuario {
 	private String email;
 	private String cpf;
 	private String telefone;
+	private String pass;
 
-	public Usuario(int id, String nome, String email, String cpf, String telefone) {
+	public Usuario(){
+		
+	}
+
+	public Usuario(int id, String nome, String email, String cpf, String telefone, String pass) {
 		super();
 		this.id = id;
 		this.nome = nome;
 		this.email = email;
 		this.cpf = cpf;
 		this.telefone = telefone;
-	}
-
-	public Usuario() {
-
+		this.pass = pass;
 	}
 
 	public int getId() {
@@ -68,4 +72,12 @@ public class Usuario {
 		this.telefone = telefone;
 	}
 
+	public String getPass() {
+		return pass;
+	}
+
+	public void setPass(String pass) {
+		this.pass = pass;
+	}
+	
 }

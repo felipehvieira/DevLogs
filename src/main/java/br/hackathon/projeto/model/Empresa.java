@@ -4,10 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="empresa")
 public class Empresa {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,12 +17,13 @@ public class Empresa {
 	private String Endereco;
 	private String telefone;
 	private String email;
+	private String pass;
 
 	public Empresa() {
 
 	}
 
-	public Empresa(int id, String nome, String cnpj, String endereco, String telefone, String email) {
+	public Empresa(int id, String nome, String cnpj, String endereco, String telefone, String email, String pass) {
 		super();
 		this.id = id;
 		this.nome = nome;
@@ -30,6 +31,7 @@ public class Empresa {
 		Endereco = endereco;
 		this.telefone = telefone;
 		this.email = email;
+		this.pass = pass;
 	}
 
 	public int getId() {
@@ -80,4 +82,13 @@ public class Empresa {
 		this.email = email;
 	}
 
+	public String getPass() {
+		return pass;
+	}
+
+	public void setPass(String pass) {
+		this.pass = pass;
+	}
+
+	
 }
