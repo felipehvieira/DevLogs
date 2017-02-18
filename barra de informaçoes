@@ -1,0 +1,25 @@
+USUARIO
+ -Cadastro
+  -Nome completo
+  -CPF
+  -Telefone
+  -Email
+ -Editar perfil
+ 
+EVENTO
+ -Disponiveis
+  -Grupos
+    -Data
+    -Hora
+    -Nome do evento
+    -Valor
+    -Desconto
+  -Sobre os últimos eventos
+    -Fotos
+    -Comentários
+  
+EMPRESA
+  -Local
+  -Valor
+  -Link de rede social
+  -Telefone/email para contato
