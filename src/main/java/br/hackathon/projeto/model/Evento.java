@@ -17,7 +17,7 @@ public class Evento {
 	private String titulo_evento;
 	@ManyToOne
 	@JoinColumn(name = "usuario_fk")
-	private Usuario usuario;
+	private Pessoa usuario;
 	@ManyToOne
 	@JoinColumn(name = "empresa_fk")
 	private Empresa empresa;
@@ -26,7 +26,7 @@ public class Evento {
 
 	}
 
-	public Evento(int id, String titulo_evento, Usuario usuario, Empresa empresa) {
+	public Evento(int id, String titulo_evento, Pessoa usuario, Empresa empresa) {
 		super();
 		this.id = id;
 		this.titulo_evento = titulo_evento;
@@ -50,11 +50,11 @@ public class Evento {
 		this.titulo_evento = titulo_evento;
 	}
 
-	public Usuario getUsuario() {
+	public Pessoa getUsuario() {
 		return usuario;
 	}
 
-	public void setUsuario(Usuario usuario) {
+	public void setUsuario(Pessoa usuario) {
 		this.usuario = usuario;
 	}
 
